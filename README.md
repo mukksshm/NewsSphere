@@ -3,6 +3,9 @@
 <!-- Description -->
 NewsSphere is a responsive web app that fetches real-time news using NewsAPI. It includes features like search, category filtering, sorting by date, pagination, and dark mode.
 
+
+link ~ https://api.spaceflightnewsapi.net/v4/articles/?format=json
+
  <!-- Features -->
 ~ Search news articles
 ~ Filter by category
