@@ -1,22 +1,25 @@
-<!-- NewsSphere – Smart News Explorer -->
+# NewsSphere – Smart News Explorer
 
-<!-- Description -->
+## 📌 Description
 NewsSphere is a responsive web app that fetches real-time news using NewsAPI. It includes features like search, category filtering, sorting by date, pagination, and dark mode.
 
- <!-- Features -->
-~ Search news articles
-~ Filter by category
-~ Sort by date
-~ Dark mode
-~ Pagination
+## 🌐 API Used
+https://api.spaceflightnewsapi.net/v4/articles/?format=json
 
-<!-- Tech Stack -->
-~ HTML
-~ CSS
-~ JavaScript
-~ NewsAPI
+## 🚀 Features
+- Search news articles
+- Filter by category
+- Sort by date
+- Dark mode
+- Pagination
 
-<!-- Setup -->
-~ Clone the repo
-~ Add your API key
-~ Open index.html
+## 🛠️ Tech Stack
+- HTML
+- CSS
+- JavaScript
+- NewsAPI
+
+## ⚙️ Setup Instructions
+1. Clone the repository
+2. Add your API key (if required)
+3. Open index.html in browser
