@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>NewsSphere</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <h1>NewsSphere</h1>
     <p>Latest Space News</p>
 
-    <!-- for loader -->
+    <input type="text" id="search" placeholder="Search news...">
+
+    <select id="sort">
+        <option value="">Sort By</option>
+        <option value="asc">Title A-Z</option>
+        <option value="desc">Title Z-A</option>
+    </select>
+
+    <button id="toggle">Toggle Dark Mode</button>
+
     <p id="loading">Loading news...</p>
 
-    <!-- for news container -->
     <div id="news-container"></div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

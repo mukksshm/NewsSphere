@@ -1,33 +1,60 @@
 const container = document.getElementById("news-container");
+const searchInput = document.getElementById("search");
+const sortSelect = document.getElementById("sort");
+const toggleBtn = document.getElementById("toggle");
+const loading = document.getElementById("loading");
 
-// simple fetch
+let allArticles = [];
+
 fetch("https://api.spaceflightnewsapi.net/v4/articles/")
-  .then(function(response) {
-    return response.json();
+  .then(res => res.json())
+  .then(data => {
+    loading.style.display = "none";
+    allArticles = data.results;
+    showNews(allArticles);
   })
-  .then(function(data) {
-    showNews(data.results);
-  })
-  .catch(function(error) {
-    console.log("Error:", error);
-  });
+  .catch(err => console.log(err));
 
-// display function
 function showNews(articles) {
+  container.innerHTML = "";
 
-  articles.slice(0, 10).forEach(function(article) {
-
+  articles.slice(0, 10).forEach(article => {
     const div = document.createElement("div");
+    div.classList.add("card");
 
     div.innerHTML = `
       <h3>${article.title}</h3>
-      <img src="${article.image_url}" width="200">
+      <img src="${article.image_url}">
       <p>${article.summary.substring(0, 80)}...</p>
       <a href="${article.url}" target="_blank">Read More</a>
-      <hr>
     `;
 
     container.appendChild(div);
   });
-
 }
+
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+
+  const filtered = allArticles.filter(article =>
+    article.title.toLowerCase().includes(value)
+  );
+
+  showNews(filtered);
+});
+
+sortSelect.addEventListener("change", () => {
+  let sorted = [...allArticles];
+
+  if (sortSelect.value === "asc") {
+    sorted.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (sortSelect.value === "desc") {
+    sorted.sort((a, b) => b.title.localeCompare(a.title));
+  }
+
+  showNews(sorted);
+});
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
