@@ -1,15 +1,15 @@
 # NewsSphere – Smart News Explorer
 
 ## 📌 Project Overview
-NewsSphere is a web application that displays real-time space news using a public API. It allows users to search, sort, and explore news articles in a clean and responsive interface.
+NewsSphere is a web application that displays SpaceX launches using a public API. It allows users to search, sort, and explore launch data in a clean and responsive interface.
 
 ## 🌐 API Used
-https://api.spaceflightnewsapi.net/v4/articles/
+https://api.spacexdata.com/v4/launches
 
 ## 🚀 Features
-- Fetch and display real-time news
-- Search articles (using filter)
-- Sort articles (A-Z, Z-A)
+- Fetch and display real-time SpaceX launches
+- Search launches (using filter)
+- Sort launches (A-Z, Z-A)
 - Dark mode toggle
 - Responsive design
 
@@ -23,7 +23,7 @@ https://api.spaceflightnewsapi.net/v4/articles/
 2. Open index.html
 
 ## 📊 Milestones Completed
-- ✅ API Integration
+- ✅ SpaceX API Integration
 - ✅ Search (HOF: filter)
 - ✅ Sorting (HOF: sort)
 - ✅ UI + Dark Mode
